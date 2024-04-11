@@ -26,15 +26,15 @@ public class RouteService {
         this.routeDao = routeDao;
     }
 
-    @Transactional(readOnly = false)
-    public RouteData saveRoute(RouteData routeData) {
-    	Route route = routeData.toRoute();
-    	Route dbRoute = routeDao.save(route);
-    	
-    	return new RouteData(dbRoute);
-    }
+//    @Transactional(readOnly = false)
+//    public RouteData saveRoute(RouteData routeData) {
+//    	Route route = routeData.toRoute();
+//    	Route dbRoute = routeDao.save(route);
+//    	
+//    	return new RouteData(dbRoute);
+//    }
     
-    @Transactional
+    @Transactional(readOnly = false)
     public RouteData createRoute(RouteData routeData) {
         Route route = routeData.toRoute();
         route = routeDao.save(route);

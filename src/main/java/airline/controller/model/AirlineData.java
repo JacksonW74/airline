@@ -28,13 +28,13 @@ public class AirlineData {
 
     public Airline toAirline() {
         Airline airline = new Airline();
-        airline.setAirlineId(airlineId);
-        airline.setName(name);
-        airline.setAddress(address);
-        airline.setCity(city);
-        airline.setState(state);
-        airline.setZip(zip);
-        airline.setPhone(phone);
+        airline.setAirlineId(this.airlineId);
+        airline.setName(this.name);
+        airline.setAddress(this.address);
+        airline.setCity(this.city);
+        airline.setState(this.state);
+        airline.setZip(this.zip);
+        airline.setPhone(this.phone);
         return airline;
     }
 }

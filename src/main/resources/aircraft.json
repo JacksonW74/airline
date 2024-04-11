@@ -1,0 +1,28 @@
+//   http://localhost:8080/aircraft/{airlineID}
+
+[
+  {
+    "aircraft_id": 1,
+    "manufacturer": "Boeing",
+    "model": "737",
+    "number_of_engines": 2,
+    "propulsion_type": "jet",
+    "tail_number": "N123AB"
+  },
+  {
+    "aircraft_id": 2,
+    "manufacturer": "Airbus",
+    "model": "A320",
+    "number_of_engines": 2,
+    "propulsion_type": "jet",
+    "tail_number": "N234CD"
+  },
+  {
+    "aircraft_id": 3,
+    "manufacturer": "Boeing",
+    "model": "787",
+    "number_of_engines": 2,
+    "propulsion_type": "jet",
+    "tail_number": "N345EF"
+  }
+]

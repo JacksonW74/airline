@@ -11,6 +11,7 @@ import jakarta.persistence.Id;
 import jakarta.persistence.OneToMany;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
+import lombok.ToString;
 
 @Entity
 @Data
@@ -27,18 +28,22 @@ public class Airline {
     private String phone;
 
     @EqualsAndHashCode.Exclude
+    @ToString.Exclude
     @OneToMany(mappedBy = "airline", cascade = CascadeType.ALL, orphanRemoval = true)
-    private Set<Aircraft> aircrafts;
+    private Set<Aircraft> aircraft;
 
     @EqualsAndHashCode.Exclude
+    @ToString.Exclude
     @OneToMany(mappedBy = "airline", cascade = CascadeType.ALL, orphanRemoval = true)
     private Set<Customer> customers;
 
     @EqualsAndHashCode.Exclude
+    @ToString.Exclude
     @OneToMany(mappedBy = "airline", cascade = CascadeType.ALL, orphanRemoval = true)
     private Set<Employee> employees;
 
     @EqualsAndHashCode.Exclude
+    @ToString.Exclude
     @OneToMany(mappedBy = "airline", cascade = CascadeType.ALL, orphanRemoval = true)
     private Set<Station> stations;
     

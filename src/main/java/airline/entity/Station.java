@@ -3,7 +3,6 @@ package airline.entity;
 import java.util.HashSet;
 import java.util.Set;
 
-import airline.controller.model.StationData;
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -14,6 +13,7 @@ import jakarta.persistence.ManyToOne;
 import jakarta.persistence.OneToMany;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
+import lombok.ToString;
 
 @Entity
 @Data
@@ -30,21 +30,23 @@ public class Station {
     private String phone;
 
     @EqualsAndHashCode.Exclude
+    @ToString.Exclude
     @ManyToOne
     @JoinColumn(name = "airline_id") 
     private Airline airline;
 
     @EqualsAndHashCode.Exclude
-    @OneToMany(cascade = CascadeType.PERSIST) 
+    @ToString.Exclude
+    @OneToMany(mappedBy = "station", cascade = CascadeType.PERSIST) 
     private Set<Employee> employees = new HashSet<>();
     
-    public Station() {}
-
-    public Station(StationData stationData) {
-        this.name = stationData.getName();
-        this.city = stationData.getCity();
-        this.state = stationData.getState();
-        this.zip = stationData.getZip();
-        this.phone = stationData.getPhone();
-    }
+//    public Station() {}
+//
+//    public Station(StationData stationData) {
+//        this.name = stationData.getName();
+//        this.city = stationData.getCity();
+//        this.state = stationData.getState();
+//        this.zip = stationData.getZip();
+//        this.phone = stationData.getPhone();
+//    }
 }

@@ -3,7 +3,6 @@ package airline.entity;
 import java.util.HashSet;
 import java.util.Set;
 
-import airline.controller.model.CustomerData;
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -14,6 +13,7 @@ import jakarta.persistence.ManyToMany;
 import jakarta.persistence.ManyToOne;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
+import lombok.ToString;
 
 @Entity
 @Data
@@ -28,18 +28,22 @@ public class Customer {
     private String phone;
     
     @EqualsAndHashCode.Exclude
+    @ToString.Exclude
     @ManyToOne
     @JoinColumn(name = "airline_id")
-    private Airline airline; // Many-to-One relationship with Airline
+    private Airline airline; 
 
     @EqualsAndHashCode.Exclude
-    @ManyToMany(cascade = CascadeType.PERSIST)
-    private Set<Route> routes = new HashSet<>(); // Many-to-Many relationship with Route   
+    @ToString.Exclude
+    @ManyToMany(mappedBy = "customer", cascade = CascadeType.PERSIST)
+    private Set<Route> routes = new HashSet<>();   
     
-    public Customer(CustomerData customerData) {
-        this.firstName = customerData.getFirstName();
-        this.lastName = customerData.getLastName();
-        this.email = customerData.getEmail();
-        this.phone = customerData.getPhone();
-    }
+//    public Customer() {}
+//    
+//    public Customer(CustomerData customerData) {
+//        this.firstName = customerData.getFirstName();
+//        this.lastName = customerData.getLastName();
+//        this.email = customerData.getEmail();
+//        this.phone = customerData.getPhone();
+//    }
 }

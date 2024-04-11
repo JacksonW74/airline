@@ -11,6 +11,7 @@ import org.springframework.transaction.annotation.Transactional;
 import airline.controller.model.AircraftData;
 import airline.dao.AircraftDao;
 import airline.entity.Aircraft;
+import airline.entity.Airline;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
@@ -25,22 +26,38 @@ public class AircraftService {
     public AircraftService(AircraftDao aircraftDao) {
         this.aircraftDao = aircraftDao;
     }
+    //	first option to save and create aircraft
+//    @Transactional(readOnly = false)
+//    public AircraftData saveAircraft(AircraftData aircraftData) {
+//    	Aircraft aircraft = aircraftData.toAircraft();
+//    	Aircraft dbAircraft = aircraftDao.save(aircraft);
+//    	
+//    	return new AircraftData(dbAircraft);
+//    }
+//    
+//    @Transactional(readOnly = false)
+//    public AircraftData createAircraft(AircraftData aircraftData) {
+//        Aircraft aircraft = aircraftData.toAircraft();
+//        aircraft = aircraftDao.save(aircraft);
+//        return new AircraftData(aircraft);
+//    }
+
+    //	second option to save and create aircraft
+    @Transactional(readOnly = false)
+    public AircraftData saveAircraft(AircraftData aircraftData, Airline airline) {
+        Aircraft aircraft = aircraftData.toAircraft(airline);
+        Aircraft dbAircraft = aircraftDao.save(aircraft);
+        return new AircraftData(dbAircraft);
+    }
 
     @Transactional(readOnly = false)
-    public AircraftData saveAircraft(AircraftData aircraftData) {
-    	Aircraft aircraft = aircraftData.toAircraft();
-    	Aircraft dbAircraft = aircraftDao.save(aircraft);
-    	
-    	return new AircraftData(dbAircraft);
-    }
-    
-    @Transactional
-    public AircraftData createAircraft(AircraftData aircraftData) {
-        Aircraft aircraft = aircraftData.toAircraft();
+    public AircraftData createAircraft(AircraftData aircraftData, Airline airline) {
+        Aircraft aircraft = aircraftData.toAircraft(airline);
         aircraft = aircraftDao.save(aircraft);
         return new AircraftData(aircraft);
     }
 
+    
     @Transactional(readOnly = true)
     public AircraftData getAircraft(Long id) {
         Aircraft aircraft = findAircraftById(id);

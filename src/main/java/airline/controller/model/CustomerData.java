@@ -39,6 +39,7 @@ public class CustomerData {
     	customer.setLastName(this.lastName);
     	customer.setEmail(this.email);
     	customer.setPhone(this.phone);
+    	return customer;
     }
     
 

@@ -1,0 +1,17 @@
+[
+  {
+    "route_id": 1,
+    "arrival_airport": "JFK",
+    "departure_airport": "LAX"
+  },
+  {
+    "route_id": 2,
+    "arrival_airport": "ORD",
+    "departure_airport": "DFW"
+  },
+  {
+    "route_id": 3,
+    "arrival_airport": "SFO",
+    "departure_airport": "SEA"
+  }
+]

@@ -2,14 +2,16 @@ package airline.controller.model;
 
 import airline.entity.Route;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
+@NoArgsConstructor
 @Data
 public class RouteData {
     private Long routeId;
     private String departureAirport;
     private String arrivalAirport;
     
-    public RouteData() {}
+//    public RouteData() {}
     
     public RouteData(Long routeId, String departureAirport, 
     		String arrivalAirport) {

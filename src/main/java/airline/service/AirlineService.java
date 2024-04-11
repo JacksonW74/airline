@@ -75,7 +75,7 @@ public class AirlineService {
         airlineDao.delete(airline);
     }
     
-    private Airline findAirlineById(Long id) {
+    public Airline findAirlineById(Long id) {
         return airlineDao.findById(id)
                 .orElseThrow(() -> new NoSuchElementException("Airline with ID=" + id + " was not found"));
     }

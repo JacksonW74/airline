@@ -20,17 +20,18 @@ import lombok.Data;
 import lombok.extern.slf4j.Slf4j;
 
 @RestController
-@RequestMapping("/api/routes")
+@RequestMapping("/route")
 @Slf4j
 @Data
 public class RouteController {
-
+	
+	@Autowired
     private RouteService routeService;
     
-    @Autowired
-    public RouteController(RouteService routeService) {
-    	this.routeService = routeService;
-    }
+    
+//    public RouteController(RouteService routeService) {
+//    	this.routeService = routeService;
+//    }
 
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)

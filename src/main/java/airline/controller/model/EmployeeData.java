@@ -42,6 +42,7 @@ public class EmployeeData {
     	employee.setEmail(this.email);
     	employee.setJobTitle(this.jobTitle);
     	employee.setDateOfHire(this.dateOfHire);
+    	return employee;
     }
     
     public void setEmployeeId(Long employeeId) {

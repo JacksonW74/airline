@@ -1,24 +1,27 @@
 package airline.controller.model;
 
 import airline.entity.Aircraft;
+import airline.entity.Airline;
+import jakarta.persistence.Entity;
 import lombok.Data;
 
-@Data
+@Data 
+//@Entity
 public class AircraftData {
-    private Long airlineId;
     private Long aircraftId;
     private String manufacturer;
     private String model;
     private String tailNumber;
     private Integer numberOfEngines;
     private String propulsionType;
+	private Long airlineId;
 
     public AircraftData() {}
 
-    public AircraftData(Long airlineId, String airlineName, Long aircraftId, 
+    public AircraftData(Long airlineId, Long aircraftId, 
     		String manufacturer, String model, String tailNumber, Integer numberOfEngines, 
-    		String propulsionType, Integer numberOfPassengers) {
-        this.airlineId = airlineId;
+    		String propulsionType) {
+    	this.airlineId = airlineId;
         this.aircraftId = aircraftId;
         this.manufacturer = manufacturer;
         this.model = model;
@@ -35,21 +38,51 @@ public class AircraftData {
         this.numberOfEngines = aircraft.getNumberOfEngines();
         this.propulsionType = aircraft.getPropulsionType();
     }
-    
-    public Aircraft toAircraft() {
+    //original method toAircraft
+//    public Aircraft toAircraft() {
+//        Aircraft aircraft = new Aircraft();
+//        aircraft.setAircraftId(aircraftId);
+//        aircraft.setManufacturer(manufacturer);
+//        aircraft.setModel(model);
+//        aircraft.setTailNumber(tailNumber);
+//        aircraft.setNumberOfEngines(numberOfEngines);
+//        aircraft.setPropulsionType(propulsionType);
+//        return aircraft;
+//    }
+    //	second option toAircraft
+//    public Aircraft toAircraft() {
+//        Aircraft aircraft = new Aircraft();
+//        aircraft.setManufacturer(manufacturer);
+//        aircraft.setModel(model);
+//        aircraft.setTailNumber(tailNumber);
+//        aircraft.setNumberOfEngines(numberOfEngines);
+//        aircraft.setPropulsionType(propulsionType);
+//
+//        // Create Airline entity and set the ID
+//        if (airlineId != null) {
+//            Airline airline = new Airline();
+//            airline.setId(airlineId);
+//            // Set the Airline entity in Aircraft
+//            aircraft.setAirline(airline);
+//        }
+//
+//        return aircraft;
+//    }
+    // third option toAircraft
+    public Aircraft toAircraft(Airline airline) {
         Aircraft aircraft = new Aircraft();
-        aircraft.setAircraftId(this.aircraftId);
-        aircraft.setManufacturer(this.manufacturer);
-        aircraft.setModel(this.model);
-        aircraft.setTailNumber(this.tailNumber);
-        aircraft.setNumberOfEngines(this.numberOfEngines);
-        aircraft.setPropulsionType(this.propulsionType);
+        aircraft.setManufacturer(manufacturer);
+        aircraft.setModel(model);
+        aircraft.setTailNumber(tailNumber);
+       	aircraft.setNumberOfEngines(numberOfEngines);
+       	aircraft.setPropulsionType(propulsionType);
+        aircraft.setAirline(airline);
         return aircraft;
-    }
+    }    
     
-    public void setAirlineId(Long airlineId) {
-        this.airlineId = airlineId;
-    }
+//    public void setAirlineId(Airline airlineId) {
+//        this.airlineId = airlineId;
+//    }
 
     public void setAircraftId(Long aircraftId) {
         this.aircraftId = aircraftId;

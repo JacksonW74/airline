@@ -20,7 +20,7 @@ import lombok.Data;
 import lombok.extern.slf4j.Slf4j;
 
 @RestController
-@RequestMapping("/api/airlines")
+@RequestMapping("/airline")
 @Slf4j
 @Data
 public class AirlineController {
