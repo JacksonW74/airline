@@ -1,6 +1,12 @@
 "# airline" 
 
-This is the Springboot final project for Promineotech backend course.
+This is it, after 18 weeks of intense bootcamp. This is the final project. A springboot application for airline management application.
+Airline entity for tracking the different airlines, airlineId 1 is the corporate entity that overseas other airline entities.
+Aircraft entity, Many aircraft to each airline entity. Each aircraft with many employees assigned to them.
+Employee entity, Many employees assigned to many airlines.
+JoinTable tracks airlineId and employeeId
 
-This application is presented as simplified airline management tool. In this case it is about one airline, that may have other airline entities underneath the corporate umbrella. Example Said Airline (passenger service), Said Aerospace (Provides heavy maintenance for Said Airline), and SaidBox (cargo service).
-This application tracks aircraft, routes, employees, customers and stations for the airlines through OneToMany and ManyToMany relationships and 3 seperate join tables.
+All tables have full crud capability (with some proper direction of course).
+
+I want to give a special thanks to Michael and Prashant who was there to help get me to this point. It didn't take long to figure out that
+Michael needs some help, but I want everyone to know that he is killing it. Thank you Michael. Thank you Prashant.

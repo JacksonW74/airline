@@ -1,9 +1,40 @@
-  {
-    "airline_id": 1,
-    "name": "FlyBox Airlines",
-    "address": "1045 Fryer Blvd",
-    "city": "Atlanta",
-    "state": "Georgia",
-    "zip": "30354",
-    "phone": "+1-800-222-1414"
-  },
+// GET http://localhost:8080/airline
+// POST http://localhost:8080/airline/airline
+// PUT http://localhost:8080/airline/airline/{airlineId}
+// DELETE http://localhost:8080/airline/{airlineId}
+
+{
+  "name": "Kellog Air Enterprises",
+  "address": "123 Main Street",
+  "city": "Kellog",
+  "state": "ID",
+  "zip": "83837",
+  "phone": "555-111-1111"
+}
+
+{
+  "name": "Kellog Air Charters",
+  "address": "456 Elm Street",
+  "city": "Kellog",
+  "state": "ID",
+  "zip": "83837",
+  "phone": "555-222-2222"
+}
+
+{
+  "name": "Kellog Aerospace",
+  "address": "789 Oak Street",
+  "city": "Kellog",
+  "state": "ID",
+  "zip": "83837",
+  "phone": "555-333-3333"
+}
+
+{
+  "name": "Kellog Fire & Rescue",
+  "address": "101 Pine Street",
+  "city": "Kellog",
+  "state": "ID",
+  "zip": "83837",
+  "phone": "555-444-4444"
+}

@@ -1,28 +1,100 @@
-//   http://localhost:8080/aircraft/{airlineID}
+//	 GET http://localhost:8080/airline/{airlineId}/aircraft
+//   POST http://localhost:8080/airline/{airlineId}/aircraft
+//	 PUT http://localhost:8080/airline/{airlineId}/aircraft/{aircraftId}
+//   DELETE http://localhost:8080/airline/{airlineId}/aircraft/{aircraftId}
 
-[
-  {
-    "aircraft_id": 1,
-    "manufacturer": "Boeing",
-    "model": "737",
-    "number_of_engines": 2,
-    "propulsion_type": "jet",
-    "tail_number": "N123AB"
-  },
-  {
-    "aircraft_id": 2,
-    "manufacturer": "Airbus",
-    "model": "A320",
-    "number_of_engines": 2,
-    "propulsion_type": "jet",
-    "tail_number": "N234CD"
-  },
-  {
-    "aircraft_id": 3,
-    "manufacturer": "Boeing",
-    "model": "787",
-    "number_of_engines": 2,
-    "propulsion_type": "jet",
-    "tail_number": "N345EF"
-  }
-]
+
+
+//
+// airlineId 1
+{
+  "manufacturer": "Corporate",
+  "model": "Headquarters",
+  "tailNumber": "None",
+  "numberOfEngines": 0,
+  "propulsionType": "Coffee"
+}
+
+// airlineId 3
+{
+  "manufacturer": "Heavy Maintenance",
+  "model": "MRO",
+  "tailNumber": "None",
+  "numberOfEngines": 0,
+  "propulsionType": "Coffee & MEK"
+}
+
+// airlineId 2
+{
+  "manufacturer": "Bombardier",
+  "model": "CRJ 900",
+  "tailNumber": "N222SC",
+  "numberOfEngines": 2,
+  "propulsionType": "Jet"
+}
+
+{
+  "manufacturer": "Embraer",
+  "model": "EMB 140",
+  "tailNumber": "N231SC",
+  "numberOfEngines": 2,
+  "propulsionType": "Jet"
+}
+
+{
+  "manufacturer": "Embraer",
+  "model": "E170",
+  "tailNumber": "N245SC",
+  "numberOfEngines": 2,
+  "propulsionType": "Jet"
+}
+
+{
+	"manufacturer": "Aerospatiale",
+	"model": "ATR72-600",
+	"tailNumber": "N267SC",
+	"numberOfEngines": 2,
+	"propulsionType": "Turbo-Prop"
+}
+
+airline 4
+{
+  "manufacturer": "Boeing",
+  "model": "717",
+  "tailNumber": "N255SC",
+  "numberOfEngines": 2,
+  "propulsionType": "Jet"
+}
+
+{
+  "manufacturer": "Lockheed",
+  "model": "C-130 Hercules",
+  "tailNumber": "N130FF",
+  "numberOfEngines": 4,
+  "propulsionType": "Turboprop"
+},
+
+{
+  "manufacturer": "Sikorsky",
+  "model": "S-70 Black Hawk",
+  "tailNumber": "N70RS",
+  "numberOfEngines": 2,
+  "propulsionType": "Turboshaft"
+},
+
+{
+  "manufacturer": "Bombardier",
+  "model": "CL-415 SuperScooper",
+  "tailNumber": "N415CL",
+  "numberOfEngines": 2,
+  "propulsionType": "Turboprop"
+},
+ 
+{
+  "manufacturer": "Bell",
+  "model": "429 GlobalRanger",
+  "tailNumber": "N429BR",
+  "numberOfEngines": 2,
+  "propulsionType": "Turboshaft"
+},
+ 

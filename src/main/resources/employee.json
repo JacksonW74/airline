@@ -1,23 +1,64 @@
+//	GET http://localhost:8080/airline/{airlineId}/employee
+//  POST http://localhost:8080/airline/{airlineId}/aircraft/{aircraftId}/employee
+//  PUT  http://localhost:8080/airline/{airlineId}/{aircraftId}/employee/{employeeId}
+//  DELETE http://localhost:8080/airline//{airlineId}/employee/{employeeId}
+
+
 [
+  // Corporate Employees = aircraftId 2 
+ 
   {
-    "first_name": "David",
-    "last_name": "Anderson",
-    "email": "david.anderson@example.com",
-    "job_title": "Pilot",
-    "date_of_hire": "2023-01-15"
+    "firstName": "John",
+    "lastName": "Doe",
+    "email": "john.doe@example.com",
+    "jobTitle": "CEO"
   },
   {
-    "first_name": "Jennifer",
-    "last_name": "Martinez",
-    "email": "jennifer.martinez@example.com",
-    "job_title": "Flight Attendant",
-    "date_of_hire": "2022-05-20"
+    "firstName": "Jane",
+    "lastName": "Smith",
+    "email": "jane.smith@example.com",
+    "jobTitle": "Human Resources"
+  },
+
+  // Maintenance Employees
+   // MRO Employees = aircraftId 3
+  {
+    "firstName": "Mike",
+    "lastName": "Johnson",
+    "email": "mike.johnson@example.com",
+    "jobTitle": "Mechanic"
   },
   {
-    "first_name": "Robert",
-    "last_name": "Garcia",
-    "email": "robert.garcia@example.com",
-    "job_title": "Mechanic",
-    "date_of_hire": "2023-09-10"
-  }
+    "firstName": "Sarah",
+    "lastName": "Davis",
+    "email": "sarah.davis@example.com",
+    "jobTitle": "Mechanic"
+  },
+
+  // Flight Crew Employees airlineId2
+  {
+    "firstName": "Michael",
+    "lastName": "Smith",
+    "email": "michael.smith@example.com",
+    "jobTitle": "Captain"
+  },
+  {
+    "firstName": "Emily",
+    "lastName": "Jones",
+    "email": "emily.jones@example.com",
+    "jobTitle": "First Officer"
+  },
+  {
+    "firstName": "Jessica",
+    "lastName": "Brown",
+    "email": "jessica.brown@example.com",
+    "jobTitle": "Flight Attendant"
+  },
+    {
+    "firstName": "Julie",
+    "lastName": "Green",
+    "email": "julie.green@example.com",
+    "jobTitle": "Captain",
+    "aircraftId": 11
+  	}
 ]
