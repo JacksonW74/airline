@@ -2,7 +2,7 @@
 
 GitHub URL: https://github.com/JacksonW74/airline
 
-YouTube URL: https://youtu.be/v4ktTMJT4Eg *NOTE* This video has a fairly long monolog to explain my thought process regarding the thought process. If you want to skip to the code, it starts a 4:02.
+YouTube URL: https://youtu.be/v4ktTMJT4Eg *NOTE* This video has a fairly long monologue to explain my thought process regarding the thought process. If you want to skip to the code, it starts a 4:02.
 
 This is it, after 18 weeks of intense bootcamp. This is the final project. A springboot application for airline management application.
 Airline entity for tracking the different airlines, airlineId 1 is the corporate entity that overseas other airline entities.
